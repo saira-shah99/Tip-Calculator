@@ -3,8 +3,8 @@
 A single-screen, live-updating tip calculator and bill splitter built with React (Vite). No "Calculate" button — all outputs update as you type.
 
 ## Live Demo
-
-(https://stunning-toffee-d4a279.netlify.app/)
+[
+(https://stunning-toffee-d4a279.netlify.app/)](https://agent-6a13db4c25694abefc--stunning-toffee-d4a279.netlify.app/)
 
 ## How to run locally
 
