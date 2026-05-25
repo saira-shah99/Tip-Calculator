@@ -4,7 +4,7 @@ A single-screen, live-updating tip calculator and bill splitter built with React
 
 ## Live Demo
 
-_(paste your Netlify URL here after deploying)_
+(https://stunning-toffee-d4a279.netlify.app/)
 
 ## How to run locally
 
