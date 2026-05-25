@@ -25,3 +25,5 @@ Per-person amounts are rounded up to the nearest paisa (ceiling at 2 decimal pla
 Math.ceil(grandTotal / people * 100) / 100
 
 When rounding occurs, the app shows exactly how much was rounded and why.
+## AI Used:
+ I am a student not a professional, whenever i got confused than i take help from Ai tool.
