@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --amber: #ef9f27;
+  --amber-light: #fef3dc;
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --text: #1a202c;
+  --text-muted: #718096;
+  --error: #e53e3e;
+  --radius: 12px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+/* ── Two-panel grid ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Form fields ── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.input-wrap:focus-within {
+  border-color: var(--amber);
+}
+
+.prefix,
+.suffix {
+  padding: 0 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  background: #f8fafc;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+input[type='number'] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.65rem 0.75rem;
+  font-size: 1.05rem;
+  color: var(--text);
+  background: transparent;
+  min-width: 0;
+}
+
+input[type='number'].error {
+  color: var(--error);
+}
+
+/* hide browser spinner arrows */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.field-error {
+  font-size: 0.8rem;
+  color: var(--error);
+}
+
+/* ── Tip mode tabs ── */
+.tip-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.45rem 0.5rem;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+
+.tab.active {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: #fff;
+}
+
+/* ── Quick-tip buttons ── */
+.quick-tips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tip-btn {
+  padding: 0.5rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text);
+  transition: all 0.15s;
+}
+
+.tip-btn:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.tip-btn.selected {
+  background: var(--amber-light);
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+/* ── Results panel ── */
+.results-panel {
+  gap: 1rem;
+}
+
+.result-card {
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.result-card--featured {
+  border-color: var(--amber);
+  background: var(--amber-light);
+  flex: 1;
+  padding: 1.25rem 1.25rem;
+}
+
+.result-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.result-value {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.result-value--lg {
+  font-size: 2rem;
+  color: #92400e;
+}
+
+.result-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.rounding-note {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #92400e;
+  background: rgba(239, 159, 39, 0.15);
+  border-left: 3px solid var(--amber);
+  padding: 0.4rem 0.6rem;
+  border-radius: 0 4px 4px 0;
+  line-height: 1.4;
+}
